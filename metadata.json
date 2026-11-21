@@ -1,0 +1,6 @@
+{
+  "name": "KHATAWAS",
+  "description": "Local-first, push-to-talk voice-first digital credit and udhaar ledger for Indian kirana shopkeepers with Kannada, Hindi, Hinglish, and English support.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', 'Noto Sans Kannada', system-ui, sans-serif;
+    --font-sans: 'Public Sans', 'Noto Sans Kannada', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono, .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes khatawas-wave-listen {
+  0%, 100% {
+    transform: scaleY(0.28);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes khatawas-wave-process {
+  0%, 100% {
+    transform: scaleY(0.35);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scaleY(0.85);
+    opacity: 1;
+  }
+}
+
+@keyframes khatawas-wave-speak {
+  0%, 100% {
+    transform: scaleY(0.32);
+  }
+  40% {
+    transform: scaleY(0.95);
+  }
+  70% {
+    transform: scaleY(0.55);
+  }
+}
+
+.animate-wave-listen {
+  animation: khatawas-wave-listen 0.75s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  transform-origin: center;
+}
+
+.animate-wave-process {
+  animation: khatawas-wave-process 1s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.animate-wave-speak {
+  animation: khatawas-wave-speak 0.65s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
